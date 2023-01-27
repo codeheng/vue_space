@@ -23,7 +23,6 @@
         </li>
         <li class="nav-item">
           <router-link class="nav-link" :to="{name :'register'}" >注册</router-link>
-          <!-- <a class="nav-link" href="#">注册</a> -->
         </li>
       </ul>
     </div>

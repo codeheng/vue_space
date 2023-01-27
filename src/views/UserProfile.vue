@@ -81,7 +81,7 @@ export default {
       user.followerCount --;
     };
 
-    //发帖函数,自组件传信息给父组件
+    //发帖函数,子组件传信息给父组件,接收
     const submit_post = (content) => {
       posts.count ++;
       // unshift在最前面加,push在最后面

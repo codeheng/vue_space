@@ -71,6 +71,8 @@ button {
     font-size: 12px;
 }
 .col-9 {
-    width: 46%;
+    /* 让div外层里面的内层div的文字左对齐 */
+  text-align: left;
 }
+
 </style>>
