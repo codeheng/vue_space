@@ -24,6 +24,8 @@ import {reactive} from 'vue';
 //引入发帖模块
 import UserProfileWrite from '@/components/UserProfileWrite'
 
+//通过给定的参数访问网址
+import { useRoute} from 'vue-router';
 
 export default {
   name: 'UserProfile',
@@ -35,6 +37,15 @@ export default {
     UserProfileWrite,
   },
   setup() {
+
+    //返回useRoute对象
+    const route = useRoute();
+    //取到网址路径中的id参数
+    const userId = route.params.userId;
+    //打印看看
+    console.log(userId);
+
+
     //用户相关的信息
     const user = reactive( {
       id : 1,
@@ -91,6 +102,8 @@ export default {
         content: content,
       })
     };
+
+    
 
     //将数据返回供前面template中调用显示
     return {

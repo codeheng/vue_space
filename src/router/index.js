@@ -13,30 +13,36 @@ const routes = [{
         component: Home
     },
     {
-        path: '/userlist',
+        path: '/userlist/',
         name: 'userlist',
         component: UserList
     },
     {
-        path: '/userprofile',
+        // :userId表示参数,需要给参数才可以访问
+        path: '/userprofile/:userId/',
         name: 'userprofile',
         component: UserProfile
     },
     {
-        path: '/login',
+        path: '/login/',
         name: 'login',
         component: LoginView
     },
     {
-        path: '/register',
+        path: '/register/',
         name: 'register',
         component: RegisterView
     },
     {
-        path: '/404',
+        path: '/404/',
         name: '404',
         component: NotFoundView
     },
+    // 正则表达式，让其跳转至404
+    {
+        path: '/:catchAll(.*)',
+        redirect: "/404/",
+    }
 
 
 ]
